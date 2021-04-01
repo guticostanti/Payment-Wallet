@@ -18,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/login', "ClientAuthController@getClientLogin")->name('login');
 
 Route::get('/', function () {
-    return redirect()->route('home');
+    return redirect()->route('login');
 });
 
 Route::get('/register', 'ClientAuthController@getClientRegister')->name('register');
+
+Route::post('/register', 'ClientAuthController@clientRegister')->name('register');
