@@ -19,9 +19,9 @@
                                 </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">CPF</label>
+                            <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">CPF ou CNPJ</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control" name="contact" id="inputEmail1" placeholder="contact">
+                                    <input type="text" class="form-control" name="cpf_cnpj" id="inputEmail1" placeholder="cpf_cnpj">
                                 </div>
                         </div>
                         <div class="form-group">
