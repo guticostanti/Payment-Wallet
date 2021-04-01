@@ -38,22 +38,6 @@
                         <a class="navbar-brand" href="{{ route('home') }}"><i class="fa fa-cash"></i><strong>Carteira Digital</strong></a>
                     </div>
                     <!-- end:navbar-header -->
-                    <ul class="nav navbar-nav navbar-left top-menu">
-                        <!-- start dropdown 3 -->
-                        <li id="header_notification_bar" class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <i class="fa fa-inbox"></i>
-                                <span class="badge bg-warning">0</span>
-                            </a>
-                            <ul class="dropdown-menu extended notification">
-                                <div class="notify-arrow notify-arrow-yellow"></div>
-                                <li>
-                                    <p class="yellow">Mensagens</p>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- end dropdown 3 -->
-                    </ul>
                     <ul class="nav navbar-nav navbar-right top-menu">
                         <!-- user login dropdown start-->
                         <li class="dropdown">
@@ -203,25 +187,13 @@
         <!-- end:main -->
 
         <!-- start:footer -->
+        
         <div class="footer-bottom">
             <div class="container">
                 <div class="footer-bottom-widget">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>
-                            <span class="sosmed-footer">
-                                <a href="#"><i class="fa fa-facebook" data-toggle="tooltip" data-placement="top" title="Facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter" data-toggle="tooltip" data-placement="top" title="Twitter"></i></a>
-                            
-                            </span>
-                            &copy; 2018 <strong>e</strong>-Wallet<strong>.</strong></p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="footer-bottom-links">
-                                <a href="#">About <strong>e</strong>-Wallet<strong>.</strong></a>
-                                <a href="#">Privacy Policy</a>
-                                <a href="#">Terms & Conditions</a>
-                            </p>
+                            <p>&copy; 2020 Carteira Digital - Gustavo Costanti Lara</p>
                         </div>
                     </div>
                 </div>
@@ -289,5 +261,4 @@
 
 </body>
 
-<!-- Mirrored from bootemplates.com/themes/srikandi/v2/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Dec 2017 16:15:27 GMT -->
 </html>	
