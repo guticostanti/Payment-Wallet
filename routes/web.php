@@ -24,3 +24,18 @@ Route::get('/', function () {
 Route::get('/register', 'ClientAuthController@getClientRegister')->name('register');
 
 Route::post('/register', 'ClientAuthController@clientRegister')->name('register');
+
+Route::get('/dashboard', 'ClientController@dashboard')->name('home');
+
+Route::get('/profile', 'ClientController@getProfile')->name('profile');
+
+Route::get('/send', 'TransactionController@getSend')->name('send');
+
+
+/* Depositar */
+Route::get('/cardView', 'TransactionController@getCardView')->name('cardView');
+
+// Route::post('/cardDeposit', 'TransactionController@cardDeposit')->name('dardDeposit');
+
+/* Histórico de transação */
+Route::get('/transaction', 'TransactionController@getTransactions')->name('transaction');

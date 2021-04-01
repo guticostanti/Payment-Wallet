@@ -90,7 +90,7 @@
                                     <a href="{{ route('send') }}">
                                         <div class="text-center">
                                             <i class="fa fa-3x fa-send"></i><br>
-                                            Send Money
+                                            Fazer Transação
                                         </div>
                                     </a>
                                 </li>
@@ -98,11 +98,10 @@
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                         <div class="text-center">
                                             <i class="fa fa-laptop fa-3x"></i><br>
-                                            Deposit<span class="caret"></span>
+                                            Depositar<span class="caret"></span>
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="{{ route('paywithpaypal') }}"><i class="fa fa-money"></i>From Paypal</a></li>
                                         <li><a href="{{ route('cardview') }}"><i class="fa fa-credit-card"></i>From Card</a></li>
                                     </ul>
                                 </li>
@@ -110,40 +109,18 @@
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                         <div class="text-center">
                                              <i class="fa fa-database fa-3x"></i><br>
-                                            Transactions <span class="caret"></span>
+                                            Transações <span class="caret"></span>
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="{{ route('transaction')}}"><i class="fa fa-list-alt"></i> Transaction History</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                        <div class="text-center">
-                                            <i class="fa fa-folder-open fa-3x"></i><br>
-                                            Withdraw Money <span class="caret"></span>
-                                        </div>
-                                    </a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="basic-table.html"><i class="fa fa-table"></i>Withdraw to Paypal</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                        <div class="text-center">
-                                            <i class="fa fa-info-circle fa-3x"></i><br>
-                                            Help Centre <span class="caret"></span>
-                                        </div>
-                                    </a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="{{ route('help')}}"><i class="fa fa-question-circle"></i> Help & Support</a></li>
+                                        <li><a href="{{ route('transaction')}}"><i class="fa fa-list-alt"></i>Histórico de Transações</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                         <div class="text-center">
                                             <i class="fa fa-users fa-3x"></i><br>
-                                            Account Settings <span class="caret"></span>
+                                            Configurações da Conta<span class="caret"></span>
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
@@ -154,7 +131,7 @@
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                         <div class="text-center">
                                             <i class="fa fa-unlock fa-3x"></i><br>
-                                            Actions <span class="caret"></span>
+                                            Logout<span class="caret"></span>
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
