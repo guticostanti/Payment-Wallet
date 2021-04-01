@@ -42,7 +42,8 @@ body{
 } 
 
 ::-webkit-scrollbar-thumb {
-	background-color: #3498db;
+	background-color: #00a64f;
+	/* #3498db*/
 	-webkit-border-radius: 2px;
 	   -moz-border-radius: 2px;
 	    -ms-border-radius: 2px;
@@ -105,8 +106,8 @@ a:hover{
 ========================================*/
 
 .header-top .navbar{
-	background-color: #3498db;
-	border-bottom: 4px solid #2980b9;
+	background-color: #00a64f;
+	border-bottom: 4px solid #50d77b
 }
 
 .header-top .navbar .navbar-brand{
@@ -122,14 +123,16 @@ a:hover{
 }
 
 .header-top .navbar-right.top-menu input.form-control{
-	background-color: #2980b9;
-	border: 1px solid #2980b9;
+	background-color: #00a64f;
+	/* #2980b9;*/
+	border: 1px solid #00a64f;
 	margin-top: 2px;
 	color: #fff;
 }
 
 .header-top .navbar-right.top-menu input.form-control:focus{
-	background-color: #3498db;
+	background-color: #00a64f;
+	/*#3498db;*/
 }
 
 .header-top .navbar-right.top-menu li.dropdown > a{
@@ -143,7 +146,8 @@ a:hover{
 .header-top .navbar-inverse .navbar-nav>.open>a, 
 .header-top .navbar-inverse .navbar-nav>.open>a:hover, 
 .header-top .navbar-inverse .navbar-nav>.open>a:focus{
-	background-color: #2980b9;
+	background-color: #00a64f;
+	/* #2980b9;*/
 }
 
 .header-top ul.top-menu > li > a {
@@ -428,18 +432,18 @@ a:hover{
 }
 
 #header .overlay{
-	background: rgba(41, 128, 185, 0.6);
+	background: rgba(41, 185, 96, 0.6);
 	padding-top: 50px;
 	padding-bottom: 60px;
 }
 
 #header .navbar-toggle{
-	background-color: #2980b9;
+	background-color: #00a64f;
 	color: #ecf0f1;
 }
 
 #header .navbar-toggle .icon-bar{
-	background-color: #3498db;
+	background-color: #00a64f;
 	width: 100%;
 }
 
@@ -474,7 +478,7 @@ a:hover{
 #header .navbar-collapse ul.nav li a:hover,
 #header .navbar-collapse ul.nav li a:focus,
 #header .navbar-collapse ul.nav li a:active{
-	background-color: rgba(41, 128, 185, 0.9);
+	background-color: #00a64f;;
 	-webkit-transition: all 1s ease;
 	   -moz-transition: all 1s ease;
 	    -ms-transition: all 1s ease;
@@ -485,7 +489,7 @@ a:hover{
 #header .nav .open > a, 
 #header .nav .open > a:hover, 
 #header .nav .open > a:focus{
-	background-color: rgba(41, 128, 185, 0.9);
+	background-color: #00a64f;;
 	-webkit-transition: all 1s ease;
 	   -moz-transition: all 1s ease;
 	    -ms-transition: all 1s ease;
@@ -498,7 +502,7 @@ a:hover{
 }
 
 #header .navbar-collapse ul.nav li.active{
-	background-color: rgba(41, 128, 185, 0.9);
+	background-color: #00a64f;;
 	-webkit-border-radius: 4px;
 	   -moz-border-radius: 4px;
 	    -ms-border-radius: 4px;
@@ -2706,7 +2710,7 @@ a:hover{
 		-webkit-border-radius: 4px;
 		   -moz-border-radius: 4px;
 		    -ms-border-radius: 4px;
-		     -o-border-radius; 4px
+		     -o-border-radius: 4px;
 				border-radius: 4px;
 	}
 
@@ -3170,9 +3174,9 @@ footer .content-widget-footer .icon-footer i.fa{
 }
 
 /* iPads (landscape) ----------- */
-@media only screen (max-width : 1024px) {
+/*@media only screen (max-width : 1024px) {*/
 /* Styles */
-}
+/*}*/
 /* Desktops and laptops ----------- */
 @media only screen and (min-width : 1224px) {
 /* Styles */
@@ -3184,6 +3188,6 @@ footer .content-widget-footer .icon-footer i.fa{
 }
 
 /* iPhone 4 ----------- */
-@mediaonly screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 }
