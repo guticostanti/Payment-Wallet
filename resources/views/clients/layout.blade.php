@@ -35,7 +35,7 @@
                 <div class="container">
                     <!-- start:navbar-header -->
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="{{ route('home') }}"><i class="fa fa-cash"></i><strong>Carteira Digital</strong></a>
+                        <a class="navbar-brand" href="{{-- route('home') --}}"><i class="fa fa-cash"></i><strong>Carteira Digital</strong></a>
                     </div>
                     <!-- end:navbar-header -->
                     <ul class="nav navbar-nav navbar-right top-menu">
@@ -52,8 +52,8 @@
                                 <li><a href="{{ route('profile')}}"><i class=" fa fa-suitcase"></i>Perfil</a></li>
                                 <li><a href="{{ route('client.logout') }}"><i class="fa fa-key"></i> Logout</a></li>
                                 @else --}}
-                                <li><a href="{{-- route('login')--}}"><i class=" fa fa-sign-in"></i>Login</a></li>
-                                <li><a href="{{-- route('register')--}}"><i class=" fa fa-sign-up"></i>Cadastrar</a></li>
+                                <li><a href="{{ route('login')}}"><i class=" fa fa-sign-in"></i>Login</a></li>
+                                <li><a href="{{ route('register')}}"><i class=" fa fa-sign-up"></i>Cadastrar</a></li>
                                 {{-- @endif --}}
                             </ul>
                         </li>

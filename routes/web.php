@@ -13,4 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', "ClientAuthController@getClientLogin")->name('home');
+
+
+Route::get('/login', "ClientAuthController@getClientLogin")->name('login');
+
+Route::get('/', function () {
+    return redirect()->route('home');
+});
+
+Route::get('/register', 'ClientAuthController@getClientRegister')->name('register');

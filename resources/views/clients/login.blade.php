@@ -27,7 +27,7 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <form class="form-horizontal" role="form" method="post" action="{{-- route('login') --}}">
+                        <form class="form-horizontal" role="form" method="post" action="{{ route('login') }}">
                         {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">Email</label>
@@ -53,7 +53,7 @@
                             <div class="form-group">
                                 <div class="col-lg-offset-2 col-lg-10">
                                     <button type="submit" class="btn btn-primary">Entrar</button>
-                                    <a href="{{-- route('register') --}}" class="btn btn-primary">Criar Conta</a>
+                                    <a href="{{ route('register') }}" class="btn btn-primary">Criar Conta</a>
                                 </div>
                             </div>
                         </form>
