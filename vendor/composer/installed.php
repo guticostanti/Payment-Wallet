@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '09da50d010cfc7d914ea08d545b740b4eaf6b6a4',
+    'reference' => '285ce008813bbf5fa50642ae25e9fede3ed43c05',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -422,7 +422,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '09da50d010cfc7d914ea08d545b740b4eaf6b6a4',
+      'reference' => '285ce008813bbf5fa50642ae25e9fede3ed43c05',
     ),
     'laravel/tinker' => 
     array (
@@ -432,6 +432,15 @@
       array (
       ),
       'reference' => '04ad32c1a3328081097a181875733fa51f402083',
+    ),
+    'laravel/ui' => 
+    array (
+      'pretty_version' => 'v2.0.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ec838c75ba1886d014c5465b1ecc79b2071f46c7',
     ),
     'lcobucci/jwt' => 
     array (
