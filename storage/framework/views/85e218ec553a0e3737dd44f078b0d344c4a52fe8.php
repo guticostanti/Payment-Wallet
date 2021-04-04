@@ -28,8 +28,7 @@
         <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <form role="form" id="payment-form" action="<?php echo e(route('send')); ?>" method="post">
-                <?php echo e(csrf_field()); ?>
-
+                <?php echo csrf_field(); ?>
                 <div id="payment-error" class="alert alert-danger <?php echo e(!Session::has('error') ? 'hidden':''); ?>">
                     <?php echo e(Session::get('error')); ?>
 
@@ -38,7 +37,7 @@
                 <div class="col-md-6">
                 <div class="form-group">
                     <label for="exampleInputPassword1">CPF do Destinatário</label>
-                    <input type="text" class="form-control" name="contact" placeholder="e.g 254702244756">
+                    <input type="text" class="form-control" name="cpf_cnpj" placeholder="e.g 254702244756">
                 </div>
                 </div>
                 <div class="col-md-6">

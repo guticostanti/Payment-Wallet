@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\Account;
+use App\Transaction;
+use App\Client;
 
 class HomeController extends Controller
 {
@@ -23,6 +27,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = Auth::user();
+        $transactions = Transaction::where('user_id',$user->id)->take(5)->get();
+        $acc_balance = Account::where('user_id',$user->id)->first();
+        return view('home', compact('user', 'transactions', 'acc_balance'));
     }
 }

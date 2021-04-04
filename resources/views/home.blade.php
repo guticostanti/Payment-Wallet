@@ -33,7 +33,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    {{--@foreach($transactions as $transaction)
+                    @foreach($transactions as $transaction)
                             <tr>
                             <td>{{$transaction->trans_id}}</td>
                             <td>{{$transaction->created_at}}</td>
@@ -41,7 +41,7 @@
                             <td>{{$transaction->amount}}</td>
                             <td><button class="btn btn-primary">Details</button></div></td>
                         </tr>
-                    @endforeach--}}
+                    @endforeach
                     </tbody>
                 </table>
         </section>

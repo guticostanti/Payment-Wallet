@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ClientAuthController extends Controller
+class UserAuthController extends Controller
 {
-    public function getClientLogin() {
+    public function getUserLogin() {
         return view('clients.login');
     }
 
-    public function getClientRegister() {
+    public function getUserRegister() {
         return view('clients.register');
     }
 }

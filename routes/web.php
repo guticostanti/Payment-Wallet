@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 
 /*
-Route::get('/login', "ClientAuthController@getClientLogin")->name('login');
+Route::get('/login', "UsertAuthController@getUserLogin")->name('login');
 Route::get('/', function () { return redirect()->route('login'); });
-Route::get('/register', 'ClientAuthController@getClientRegister')->name('register');
+Route::get('/register', 'UserAuthController@getUserRegister')->name('register');
 
-Route::post('/register', 'ClientAuthController@clientRegister')->name('register');
+Route::post('/register', 'UserAuthController@userRegister')->name('register');
 
 Route::post('login', 'AuthController@login');
 Route::post('logout', 'AuthController@logout');
@@ -27,7 +27,7 @@ Route::post('refresh', 'AuthController@refresh');
 Route::post('me', 'AuthController@me');
 
 Route::middleware('jwt.auth')->group(function () {
-    Route::get('/dashboard', 'ClientController@dashboard')->name('home');
+    Route::get('/dashboard', 'UserController@dashboard')->name('home');
 
 });
 */
@@ -50,7 +50,8 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
-
+Route::get('password/confirm', 'Auth\ConfirmPasswordController@showConfirmForm')->name('password.confirm');
+Route::post('password/confirm', 'Auth\ConfirmPasswordController@confirm');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -61,7 +62,7 @@ Route::get('/', function () {
 
 
 Route::middleware('auth')->group(function() {
-    Route::get('/profile', 'ClientController@getProfile')->name('profile');
+    Route::get('/profile', 'UserController@getProfile')->name('profile');
     Route::get('/send', 'TransactionController@getSend')->name('send');
     Route::get('/cardView', 'TransactionController@getCardView')->name('cardview');
     Route::get('/transaction', 'TransactionController@getTransactions')->name('transaction');

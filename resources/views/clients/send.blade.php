@@ -26,7 +26,7 @@
         <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <form role="form" id="payment-form" action="{{ route('send')}}" method="post">
-                {{ csrf_field() }}
+                @csrf
                 <div id="payment-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden':''}}">
                     {{ Session::get('error') }}
                 </div>
@@ -34,7 +34,7 @@
                 <div class="col-md-6">
                 <div class="form-group">
                     <label for="exampleInputPassword1">CPF do Destinatário</label>
-                    <input type="text" class="form-control" name="contact" placeholder="e.g 254702244756">
+                    <input type="text" class="form-control" name="cpf_cnpj" placeholder="e.g 254702244756">
                 </div>
                 </div>
                 <div class="col-md-6">
