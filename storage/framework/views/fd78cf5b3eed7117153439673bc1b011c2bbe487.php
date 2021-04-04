@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <section class="panel">
         <header class="panel-heading">
             <b><h3>Histórico de Transações</h3></b> 
@@ -26,17 +26,7 @@
                 </tr>
             </tfoot>
             <tbody>
-            {{-- @foreach($transactions as $transaction)
-                    <tr>
-                    <td>{{$transaction->trans_id}}</td>
-                    <td>{{$transaction->created_at}}</td>
-                    <td>{{$transaction->type}}</td>
-                    <td>{{$transaction->amount}}</td>
-                    <td>{{$transaction->sender}}</td>
-                    <td>{{$transaction->receiver}}</td>
-                    <td><button class="btn btn-primary">Details</button></div></td>
-                </tr>
-            @endforeach--}}
+            
             </tbody>
         </table>
     </section>
@@ -49,8 +39,8 @@
     }
     </style>
 
-@endsection
-@section('scripts')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('scripts'); ?>
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -77,4 +67,5 @@ $(document).ready(function() {
     } );
 } );
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Meus repositórios github\Payment-Wallet\resources\views/clients/transaction.blade.php ENDPATH**/ ?>

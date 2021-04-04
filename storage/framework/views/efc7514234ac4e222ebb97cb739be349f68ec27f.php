@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 
 <div class="row">
     <div class="col-lg-8">
@@ -10,30 +10,31 @@
             <div class="panel-body">
             <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <form class="form-horizontal" role="form" method="post" action="{{ route('register') }}">
-                {{ csrf_field() }}
+                <form class="form-horizontal" role="form" method="post" action="<?php echo e(route('register')); ?>">
+                <?php echo e(csrf_field()); ?>
+
                     <div class="form-group">
                         <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">Nome</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" name="names" value="{{-- $client->names --}}" id="inputEmail1" placeholder="Nome" disabled>
+                            <input type="text" class="form-control" name="names" value="" id="inputEmail1" placeholder="Nome" disabled>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">CPF/CNPJ</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" name="contact" value="{{-- $client->contact --}}" id="inputEmail1" disabled placeholder="CPF/CNPJ">
+                            <input type="text" class="form-control" name="contact" value="" id="inputEmail1" disabled placeholder="CPF/CNPJ">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">Email</label>
                         <div class="col-lg-10">
-                            <input type="email" class="form-control" name="email" value="{{-- $client->email --}}" id="inputEmail1" placeholder="Email">
+                            <input type="email" class="form-control" name="email" value="" id="inputEmail1" placeholder="Email">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">API Secret Key</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" name="key" value="{{-- $client->secret_key --}}" id="inputEmail1" placeholder="Secret Key" disabled>
+                            <input type="text" class="form-control" name="key" value="" id="inputEmail1" placeholder="Secret Key" disabled>
                         </div>
                     </div>
                     <div class="form-group">
@@ -62,7 +63,7 @@
                 <div class="text-center" id="author">
                     <!-- <img src="img/user/avatar-3.jpg"> -->
                     <h3>Saldo</h3>
-                    <h2>{{-- $acc_balance->balance --}} BRL</h2>
+                    <h2> BRL</h2>
                 </div>
             </div>
         </div>
@@ -70,4 +71,5 @@
     </div>
 </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Meus repositórios github\Payment-Wallet\resources\views/clients/profile.blade.php ENDPATH**/ ?>

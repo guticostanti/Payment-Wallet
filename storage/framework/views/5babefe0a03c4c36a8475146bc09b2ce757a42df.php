@@ -7,13 +7,6 @@
             
 
             
-            <div class="card-body">
-                    <?php if(session('status')): ?>
-                        <div class="alert alert-success" role="alert">
-                            <?php echo e(session('status')); ?>
-
-                        </div>
-                    <?php endif; ?>
                 <header class="panel-heading">
                     <b>Transações recentes</b> 
                 </header>

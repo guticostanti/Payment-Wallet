@@ -48,13 +48,13 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <div class="log-arrow-up"></div>
-                                {{-- @if(Auth::guard('client')->check())
+                                @if(Auth::check())
                                 <li><a href="{{ route('profile')}}"><i class=" fa fa-suitcase"></i>Perfil</a></li>
-                                <li><a href="{{ route('client.logout') }}"><i class="fa fa-key"></i> Logout</a></li>
-                                @else --}}
+                                <li><a href="{{ route('logout') }}"><i class="fa fa-key"></i> Logout</a></li>
+                                @else
                                 <li><a href="{{ route('login')}}"><i class=" fa fa-sign-in"></i>Login</a></li>
                                 <li><a href="{{ route('register')}}"><i class=" fa fa-sign-up"></i>Cadastrar</a></li>
-                                {{-- @endif --}}
+                                @endif
                             </ul>
                         </li>
                     </ul>
@@ -75,7 +75,7 @@
                         </div>
                     
                         <!-- Collect the nav links, forms, and other content for toggling -->
-                        {{--@if(Auth::guard('client')->check())
+                        @if(Auth::check())
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav">
                                 <li class="">
@@ -102,7 +102,7 @@
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="{{ route('cardview') }}"><i class="fa fa-credit-card"></i>From Card</a></li>
+                                        <li><a href="{{ route('cardview') }}"><i class="fa fa-credit-card"></i>Com cartão de crédito</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -124,7 +124,7 @@
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="{{ route('profile') }}"><i class="fa fa-user"></i>Profile</a></li>
+                                        <li><a href="{{ route('profile') }}"><i class="fa fa-user"></i>Perfil</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -135,12 +135,12 @@
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="{{ route('client.logout') }}"><i class="fa fa-unlock-alt"></i> LogOut</a></li>
+                                        <li><a href="{{ route('logout') }}"><i class="fa fa-unlock-alt"></i> LogOut</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
-                    @endif --}}
+                    @endif
                     <!-- /.navbar-collapse -->
                     </div>
                 </nav>

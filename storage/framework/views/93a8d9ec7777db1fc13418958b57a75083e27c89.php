@@ -48,10 +48,13 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <div class="log-arrow-up"></div>
-                                
+                                <?php if(Auth::check()): ?>
+                                <li><a href="<?php echo e(route('profile')); ?>"><i class=" fa fa-suitcase"></i>Perfil</a></li>
+                                <li><a href="<?php echo e(route('logout')); ?>"><i class="fa fa-key"></i> Logout</a></li>
+                                <?php else: ?>
                                 <li><a href="<?php echo e(route('login')); ?>"><i class=" fa fa-sign-in"></i>Login</a></li>
                                 <li><a href="<?php echo e(route('register')); ?>"><i class=" fa fa-sign-up"></i>Cadastrar</a></li>
-                                
+                                <?php endif; ?>
                             </ul>
                         </li>
                     </ul>
@@ -72,7 +75,72 @@
                         </div>
                     
                         <!-- Collect the nav links, forms, and other content for toggling -->
-                        
+                        <?php if(Auth::check()): ?>
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="">
+                                    <a href="<?php echo e(route('home')); ?>">
+                                        <div class="text-center">
+                                            <i class="fa fa-dashboard fa-3x"></i><br>
+                                            Dashboard
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="<?php echo e(route('send')); ?>">
+                                        <div class="text-center">
+                                            <i class="fa fa-3x fa-send"></i><br>
+                                            Fazer Transação
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <div class="text-center">
+                                            <i class="fa fa-laptop fa-3x"></i><br>
+                                            Depositar<span class="caret"></span>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="<?php echo e(route('cardview')); ?>"><i class="fa fa-credit-card"></i>Com cartão de crédito</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <div class="text-center">
+                                             <i class="fa fa-database fa-3x"></i><br>
+                                            Transações <span class="caret"></span>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="<?php echo e(route('transaction')); ?>"><i class="fa fa-list-alt"></i>Histórico de Transações</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <div class="text-center">
+                                            <i class="fa fa-users fa-3x"></i><br>
+                                            Configurações da Conta<span class="caret"></span>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="<?php echo e(route('profile')); ?>"><i class="fa fa-user"></i>Perfil</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <div class="text-center">
+                                            <i class="fa fa-unlock fa-3x"></i><br>
+                                            Logout<span class="caret"></span>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="<?php echo e(route('logout')); ?>"><i class="fa fa-unlock-alt"></i> LogOut</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
                     <!-- /.navbar-collapse -->
                     </div>
                 </nav>
