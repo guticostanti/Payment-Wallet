@@ -1,24 +1,19 @@
-@extends('clients.layout')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 
 <div class="row" id="home-content">
     <div class="col-lg-9">
         <section class="panel">
-            {{--@if ($message = Session::get('success'))
-                <div class="custom-alerts alert alert-success fade in">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-                    {!! $message !!}
-                </div>
-                <?php //Session::forget('success');?>
-            @endif --}}
+            
 
-            {{-- @if ($message = Session::get('error'))
-                <div class="custom-alerts alert alert-danger fade in">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-                    {!! $message !!}
-                </div>
-                <?php //Session::forget('error');?>
-            @endif --}}
+            
+            <div class="card-body">
+                    <?php if(session('status')): ?>
+                        <div class="alert alert-success" role="alert">
+                            <?php echo e(session('status')); ?>
+
+                        </div>
+                    <?php endif; ?>
                 <header class="panel-heading">
                     <b>Transações recentes</b> 
                 </header>
@@ -33,15 +28,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    {{--@foreach($transactions as $transaction)
-                            <tr>
-                            <td>{{$transaction->trans_id}}</td>
-                            <td>{{$transaction->created_at}}</td>
-                            <td>{{$transaction->type}}</td>
-                            <td>{{$transaction->amount}}</td>
-                            <td><button class="btn btn-primary">Details</button></div></td>
-                        </tr>
-                    @endforeach--}}
+                    
                     </tbody>
                 </table>
         </section>
@@ -68,7 +55,7 @@
                     <div class="text-center" id="author">
                         <!-- <img src="img/user/avatar-3.jpg"> -->
                         <h3>Saldo</h3>
-                        <h2>{{-- $acc_balance->balance --}} BRL</h2>
+                        <h2> BRL</h2>
                     </div>
                 </div>
             </div>
@@ -76,4 +63,5 @@
         </div>
     </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Meus repositórios github\Payment-Wallet\resources\views/home.blade.php ENDPATH**/ ?>

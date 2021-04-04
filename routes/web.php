@@ -56,29 +56,6 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('passw
 
 Route::get('/home', 'HomeController@index');
 
-
-/*
-return function ($options) {
-
-
-    // Registration Routes...
-    if ($options['register'] ?? true) {
-        $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-        $this->post('register', 'Auth\RegisterController@register');
-    }
-
-
-
-    // Password Confirmation Routes...
-    if ($options['confirm'] ??
-        class_exists($this->prependGroupNamespace('Auth\ConfirmPasswordController'))) {
-        $this->confirmPassword();
-    }
-
-    // Email Verification Routes...
-    if ($options['verify'] ?? false) {
-        $this->emailVerification();
-    }
-};
-}
-*/
+Route::get('/', function () {
+    return view('auth.login');
+})->middleware('guest');

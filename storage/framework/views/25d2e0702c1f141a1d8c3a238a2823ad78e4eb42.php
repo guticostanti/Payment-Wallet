@@ -1,5 +1,5 @@
-@extends('clients.layout')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
  <!-- start:form login -->
 
 
@@ -10,8 +10,9 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <form class="form-horizontal" role="form" method="post" action="{{ route('register') }}">
-                        {{ csrf_field() }}
+                    <form class="form-horizontal" role="form" method="post" action="<?php echo e(route('register')); ?>">
+                        <?php echo e(csrf_field()); ?>
+
                         <div class="form-group">
                             <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">Nome Completo</label>
                                 <div class="col-lg-10">
@@ -41,7 +42,7 @@
                         <div class="form-group">
                             <div class="col-lg-offset-2 col-lg-10">
                                 <button type="submit" class="btn btn-primary">Criar Conta</button>
-                                    <a href="{{ route('login') }}" class="btn btn-primary" >Voltar para Login</a>
+                                    <a href="<?php echo e(route('login')); ?>" class="btn btn-primary" >Voltar para Login</a>
                             </div>
                         </div>
                     </form>
@@ -52,4 +53,5 @@
 
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Meus repositórios github\Payment-Wallet\resources\views/auth/register.blade.php ENDPATH**/ ?>

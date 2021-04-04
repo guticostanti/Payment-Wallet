@@ -1,25 +1,13 @@
-@extends('clients.layout')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
  <!-- start:form login -->
 
 
     <section class="panel panel-default">
-        {{-- @if ($message = Session::get('success'))
-            <div class="custom-alerts alert alert-success fade in">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-                {!! $message !!}
-            </div>
-            <?php //Session::forget('success');?>
-        @endif --}}
+        
 
-        {{-- @if ($message = Session::get('error'))
-            <div class="custom-alerts alert alert-danger fade in">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-                {!! $message !!}
-            </div>
-            <?php //Session::forget('error');?>
-        @endif --}}
+        
 
             <header class="panel-heading text-center panel-relative">
                 <h3><b>Fazer Login na Carteira</b></h3>
@@ -27,8 +15,9 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <form class="form-horizontal" role="form" method="post" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+                        <form class="form-horizontal" role="form" method="post" action="<?php echo e(route('login')); ?>">
+                        <?php echo e(csrf_field()); ?>
+
                             <div class="form-group">
                                 <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">Email</label>
                                 <div class="col-lg-10">
@@ -53,7 +42,7 @@
                             <div class="form-group">
                                 <div class="col-lg-offset-2 col-lg-10">
                                     <button type="submit" class="btn btn-primary">Entrar</button>
-                                    <a href="{{ route('register') }}" class="btn btn-primary">Criar Conta</a>
+                                    <a href="<?php echo e(route('register')); ?>" class="btn btn-primary">Criar Conta</a>
                                 </div>
                             </div>
                         </form>
@@ -64,4 +53,5 @@
 
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Meus repositórios github\Payment-Wallet\resources\views/auth/login.blade.php ENDPATH**/ ?>
