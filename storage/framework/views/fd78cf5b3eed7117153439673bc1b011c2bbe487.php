@@ -26,7 +26,17 @@
                 </tr>
             </tfoot>
             <tbody>
-            
+            <?php $__currentLoopData = $transactions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $transaction): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <tr>
+                    <td><?php echo e($transaction->trans_id); ?></td>
+                    <td><?php echo e($transaction->created_at); ?></td>
+                    <td><?php echo e($transaction->type); ?></td>
+                    <td><?php echo e($transaction->amount); ?></td>
+                    <td><?php echo e($transaction->sender); ?></td>
+                    <td><?php echo e($transaction->receiver); ?></td>
+                    <td><button class="btn btn-primary">Details</button></div></td>
+                </tr>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </tbody>
         </table>
     </section>

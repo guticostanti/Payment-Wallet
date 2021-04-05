@@ -65,8 +65,7 @@ class TransactionController extends Controller
 
             $request->session()->put('success','Transferência realizada com sucesso');
             return redirect()->route('home');
-        }else
-        {
+        } else {
             $request->session()->put('error','Saldo insuficiente');
             return redirect()->route('send');
         }
