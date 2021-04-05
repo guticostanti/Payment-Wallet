@@ -4,21 +4,21 @@
 <div class="row" id="home-content">
     <div class="col-lg-9">
         <section class="panel">
-            {{--@if ($message = Session::get('success'))
+            @if ($message = $request->session()->get('success'))
                 <div class="custom-alerts alert alert-success fade in">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
                     {!! $message !!}
                 </div>
-                <?php //Session::forget('success');?>
-            @endif --}}
+                <?php $request->session()->forget('success');?>
+            @endif
 
-            {{-- @if ($message = Session::get('error'))
+            @if ($message = $request->session()->get('error'))
                 <div class="custom-alerts alert alert-danger fade in">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
                     {!! $message !!}
                 </div>
-                <?php //Session::forget('error');?>
-            @endif --}}
+                <?php $request->session()->forget('error');?>
+            @endif
                 <header class="panel-heading">
                     <b>Transações recentes</b> 
                 </header>

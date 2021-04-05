@@ -9,8 +9,8 @@
  <div class="row">
    <div class="col-md-8 col-md-offset-2">
      <form role="form" id="payment-form" action="{{-- route('cardDeposit') --}}" method="post">
-        <div id="payment-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden':''}}">
-        {{ Session::get('error') }}
+        <div id="payment-error" class="alert alert-danger {{ !$request->session()->exists('error') ? 'hidden':''}}">
+        {{ $request->session()->get('error') }}
         </div>
          <div class="form-group">
              <label for="exampleInputEmail1">Número do Cartão de Crédito</label>
@@ -19,12 +19,12 @@
          <div class="row">
          <div class="col-md-6">
          <div class="form-group">
-             <label for="exampleInputPassword1">Mês de Expiração</label>
-             <input type="text" class="form-control" id="card-expiry-month" placeholder="Expiration Month">
+             <label for="exampleInputPassword1">Mês de Expiração do Cartão</label>
+             <input type="text" class="form-control" id="card-expiry-month" placeholder="Mês de Expiração">
          </div>
          <div class="form-group">
-             <label for="exampleInputFile">Ano de Expiração</label>
-             <input type="text" class="form-control" id="card-expiry-year" placeholder="Expiration Year">
+             <label for="exampleInputFile">Ano de Expiração do Cartão</label>
+             <input type="text" class="form-control" id="card-expiry-year" placeholder="Ano de Expiração">
          </div>
 
          </div>
@@ -39,7 +39,7 @@
          </div>
          </div>
          </div>
-         {{ csrf_field() }}
+         @csrf
          <button type="submit" class="btn btn-primary">Enviar</button>
          
    </form>

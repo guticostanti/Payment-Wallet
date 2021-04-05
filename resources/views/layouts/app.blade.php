@@ -35,7 +35,7 @@
                 <div class="container">
                     <!-- start:navbar-header -->
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="{{-- route('home') --}}"><i class="fa fa-cash"></i><strong>Carteira Digital</strong></a>
+                        <a class="navbar-brand" href="{{ route('home') }}"><i class="fa fa-cash"></i><strong>Carteira Digital</strong></a>
                     </div>
                     <!-- end:navbar-header -->
                     <ul class="nav navbar-nav navbar-right top-menu">

@@ -27,13 +27,13 @@
                     <div class="form-group">
                         <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">Email</label>
                         <div class="col-lg-10">
-                            <input type="email" class="form-control" name="email" value="<?php echo e($user->email); ?>" id="inputEmail1" placeholder="Email">
+                            <input type="email" class="form-control" name="email" value="<?php echo e($user->email); ?>" id="inputEmail1" placeholder="Email" disabled>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <div class="col-lg-offset-2 col-lg-10">
                             <button type="submit" class="btn btn-primary">Atualizar Perfil</button>
-                        </div>
+                        </div> -->
                     </div>
                 </form>               
             </div>

@@ -2,20 +2,20 @@
 @section('content')
  <!-- start:form login -->
     <section class="panel panel-default">
-        @if ($message = Session::get('success'))
+        @if ($message = $request->session()->get('success'))
             <div class="custom-alerts alert alert-success fade in">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
                 {!! $message !!}
             </div>
-            <?php Session::forget('success');?>
+            <?php $request->session()->forget('success');?>
         @endif
 
-        @if ($message = Session::get('error'))
+        @if ($message = $request->session()->get('error'))
             <div class="custom-alerts alert alert-danger fade in">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
                 {!! $message !!}
             </div>
-            <?php Session::forget('error');?>
+            <?php $request->session()->forget('error');?>
         @endif
 
         <header class="panel-heading text-center">
@@ -27,26 +27,26 @@
         <div class="col-md-8 col-md-offset-2">
             <form role="form" id="payment-form" action="{{ route('send')}}" method="post">
                 @csrf
-                <div id="payment-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden':''}}">
-                    {{ Session::get('error') }}
+                <div id="payment-error" class="alert alert-danger {{ !$request->session()->exists('error') ? 'hidden':''}}">
+                    {{ $request->session()->get('error') }}
                 </div>
                 <div class="row">
                 <div class="col-md-6">
                 <div class="form-group">
-                    <label for="exampleInputPassword1">CPF do Destinatário</label>
-                    <input type="text" class="form-control" name="cpf_cnpj" placeholder="e.g 254702244756">
+                    <label for="exampleInputPassword1">CPF ou CNPJ do Destinatário</label>
+                    <input type="text" class="form-control" name="cpf_cnpj" placeholder="CPF/CNPJ - Somente números">
                 </div>
                 </div>
                 <div class="col-md-6">
                 <div class="form-group">
                     <label for="exampleInputFile">Valor</label>
-                    <input type="text" class="form-control" name="amount" placeholder="amount to send">
+                    <input type="text" class="form-control" name="amount" placeholder="Valor da transação">
                 </div>
                 </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile">Desrição</label>
-                    <textarea class="form-control" name="description" id="description" placeholder="short description"></textarea>     
+                    <textarea class="form-control" name="description" id="description" placeholder="Breve Descrição"></textarea>     
                 </div>
                 <div class="form-group">
                 <button type="submit" class="btn btn-primary">Enviar</button>

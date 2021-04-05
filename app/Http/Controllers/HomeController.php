@@ -25,11 +25,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
         $user = Auth::user();
         $transactions = Transaction::where('user_id',$user->id)->take(5)->get();
         $acc_balance = Account::where('user_id',$user->id)->first();
-        return view('home', compact('user', 'transactions', 'acc_balance'));
+        return view('home', compact('request', 'user', 'transactions', 'acc_balance'));
     }
 }

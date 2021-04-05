@@ -9,8 +9,8 @@
  <div class="row">
    <div class="col-md-8 col-md-offset-2">
      <form role="form" id="payment-form" action="" method="post">
-        <div id="payment-error" class="alert alert-danger <?php echo e(!Session::has('error') ? 'hidden':''); ?>">
-        <?php echo e(Session::get('error')); ?>
+        <div id="payment-error" class="alert alert-danger <?php echo e(!$request->session()->exists('error') ? 'hidden':''); ?>">
+        <?php echo e($request->session()->get('error')); ?>
 
         </div>
          <div class="form-group">
@@ -20,12 +20,12 @@
          <div class="row">
          <div class="col-md-6">
          <div class="form-group">
-             <label for="exampleInputPassword1">Mês de Expiração</label>
-             <input type="text" class="form-control" id="card-expiry-month" placeholder="Expiration Month">
+             <label for="exampleInputPassword1">Mês de Expiração do Cartão</label>
+             <input type="text" class="form-control" id="card-expiry-month" placeholder="Mês de Expiração">
          </div>
          <div class="form-group">
-             <label for="exampleInputFile">Ano de Expiração</label>
-             <input type="text" class="form-control" id="card-expiry-year" placeholder="Expiration Year">
+             <label for="exampleInputFile">Ano de Expiração do Cartão</label>
+             <input type="text" class="form-control" id="card-expiry-year" placeholder="Ano de Expiração">
          </div>
 
          </div>
@@ -40,8 +40,7 @@
          </div>
          </div>
          </div>
-         <?php echo e(csrf_field()); ?>
-
+         <?php echo csrf_field(); ?>
          <button type="submit" class="btn btn-primary">Enviar</button>
          
    </form>

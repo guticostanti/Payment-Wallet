@@ -21,6 +21,7 @@ class CreateTransactionsTable extends Migration
             $table->double('amount');
             $table->string('sender');
             $table->string('receiver');
+            $table->string('status');
             $table->string('description');
             $table->timestamps();
         });

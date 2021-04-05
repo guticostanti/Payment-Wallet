@@ -4,9 +4,23 @@
 <div class="row" id="home-content">
     <div class="col-lg-9">
         <section class="panel">
-            
+            <?php if($message = $request->session()->get('success')): ?>
+                <div class="custom-alerts alert alert-success fade in">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                    <?php echo $message; ?>
 
-            
+                </div>
+                <?php $request->session()->forget('success');?>
+            <?php endif; ?>
+
+            <?php if($message = $request->session()->get('error')): ?>
+                <div class="custom-alerts alert alert-danger fade in">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                    <?php echo $message; ?>
+
+                </div>
+                <?php $request->session()->forget('error');?>
+            <?php endif; ?>
                 <header class="panel-heading">
                     <b>Transações recentes</b> 
                 </header>
