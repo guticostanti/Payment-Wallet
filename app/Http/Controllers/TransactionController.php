@@ -52,7 +52,7 @@ class TransactionController extends Controller
             $receiver_account->save();
 
             $transaction = new Transaction();
-            $transaction->type = 'send';
+            $transaction->type = 'Enviado';
             $transaction->trans_id = str_random(15);
             $transaction->amount = $amount;
             $transaction->description=$request->input('description');
@@ -61,6 +61,17 @@ class TransactionController extends Controller
             $transaction->status='completed';
             $transaction->receiver = $receiver->name;
             $transaction->save();
+
+            $received_transaction = new Transaction();
+            $received_transaction->type = 'Recebido';
+            $received_transaction->trans_id = str_random(15);
+            $received_transaction->amount = $amount;
+            $received_transaction->description=$request->input('description');
+            $received_transaction->user_id = $receiver->id;
+            $received_transaction->sender = Auth::user()->name;
+            $received_transaction->status='completed';
+            $received_transaction->receiver = $receiver->name;
+            $received_transaction->save();
             
 
             $sender_account = Account::where('user_id',$user->id)->first();

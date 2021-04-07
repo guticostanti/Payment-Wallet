@@ -56,7 +56,7 @@
                 <div class="text-center" id="author">
                     <!-- <img src="img/user/avatar-3.jpg"> -->
                     <h3>Saldo</h3>
-                    <h2>{{-- $acc_balance->balance --}} BRL</h2>
+                    <h2>{{ $acc_balance->balance }} BRL</h2>
                 </div>
             </div>
         </div>

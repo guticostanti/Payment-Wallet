@@ -31,7 +31,6 @@
                             <th>Data</th>
                             <th>Tipo</th>
                             <th>Valor</th>
-                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,7 +40,6 @@
                             <td><?php echo e($transaction->created_at); ?></td>
                             <td><?php echo e($transaction->type); ?></td>
                             <td><?php echo e($transaction->amount); ?></td>
-                            <td><button class="btn btn-primary">Details</button></div></td>
                         </tr>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </tbody>

@@ -15,16 +15,6 @@
                     <th>Receiver</th>
                 </tr>
             </thead>
-            <tfoot>
-                <tr>
-                    <th>ID da Transação</th>
-                    <th>Data</th>
-                    <th>Tipo</th>
-                    <th>Valor</th>
-                    <th>Sender</th>
-                    <th>Receiver</th>
-                </tr>
-            </tfoot>
             <tbody>
             @foreach($transactions as $transaction)
                     <tr>
@@ -34,7 +24,6 @@
                     <td>{{$transaction->amount}}</td>
                     <td>{{$transaction->sender}}</td>
                     <td>{{$transaction->receiver}}</td>
-                    <td><button class="btn btn-primary">Details</button></div></td>
                 </tr>
             @endforeach
             </tbody>
@@ -49,32 +38,4 @@
     }
     </style>
 
-@endsection
-@section('scripts')
-
-<script type="text/javascript">
-$(document).ready(function() {
-    // Setup - add a text input to each footer cell
-    $('#trans-table tfoot th').each( function () {
-        var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-    } );
- 
-    // DataTable
-    var table = $('#trans-table').DataTable();
- 
-    // Apply the search
-    table.columns().every( function () {
-        var that = this;
- 
-        $( 'input', this.footer() ).on( 'keyup change', function () {
-            if ( that.search() !== this.value ) {
-                that
-                    .search( this.value )
-                    .draw();
-            }
-        } );
-    } );
-} );
-</script>
 @endsection

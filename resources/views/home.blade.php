@@ -29,7 +29,6 @@
                             <th>Data</th>
                             <th>Tipo</th>
                             <th>Valor</th>
-                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,7 +38,6 @@
                             <td>{{$transaction->created_at}}</td>
                             <td>{{$transaction->type}}</td>
                             <td>{{$transaction->amount}}</td>
-                            <td><button class="btn btn-primary">Details</button></div></td>
                         </tr>
                     @endforeach
                     </tbody>
