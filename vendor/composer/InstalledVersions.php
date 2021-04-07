@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '285ce008813bbf5fa50642ae25e9fede3ed43c05',
+    'reference' => '27232da3247e5a1823849e5c76f8d13d7432563d',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -186,12 +186,12 @@ private static $installed = array (
     ),
     'guzzlehttp/guzzle' => 
     array (
-      'pretty_version' => '6.5.5',
-      'version' => '6.5.5.0',
+      'pretty_version' => '7.3.0',
+      'version' => '7.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9d4290de1cfd701f38099ef7e183b64b4b7b0c5e',
+      'reference' => '7008573787b430c1c1f650e3722d9bba59967628',
     ),
     'guzzlehttp/promises' => 
     array (
@@ -439,6 +439,15 @@ private static $installed = array (
       ),
       'reference' => 'de187e9200948bab6975167e480950abcd5efdac',
     ),
+    'laravel/helpers' => 
+    array (
+      'pretty_version' => 'v1.4.1',
+      'version' => '1.4.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'febb10d8daaf86123825de2cb87f789a3371f0ac',
+    ),
     'laravel/laravel' => 
     array (
       'pretty_version' => 'dev-master',
@@ -446,7 +455,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '285ce008813bbf5fa50642ae25e9fede3ed43c05',
+      'reference' => '27232da3247e5a1823849e5c76f8d13d7432563d',
     ),
     'laravel/tinker' => 
     array (
@@ -712,6 +721,22 @@ private static $installed = array (
       'reference' => 'dbefd12671e8a14ec7f180cab83036ed26714bb0',
     ),
     'psr/event-dispatcher-implementation' => 
+    array (
+      'provided' => 
+      array (
+        0 => '1.0',
+      ),
+    ),
+    'psr/http-client' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2dfb5f6c5eff0e91e20e913f8c5452ed95b86621',
+    ),
+    'psr/http-client-implementation' => 
     array (
       'provided' => 
       array (

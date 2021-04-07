@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 use App\Transaction;
 use Auth;
@@ -29,7 +30,7 @@ class TransactionController extends Controller
 
     public function postSend(Request $request) {
         $user = Auth::user();
-        $sender_account = Account::where('user_id',$client->id)->first();
+        $sender_account = Account::where('user_id',$user->id)->first();
         $balance = $sender_account->balance;
         $balance = (float)$balance;
 
@@ -37,11 +38,14 @@ class TransactionController extends Controller
         $amount = (float)$amount;
         $remaining_balance = $balance - $amount;
 
-        if($remaining_balance > 0){
+        $apiresponse = Http::get('http://run.mocky.io/v3/8fafdd68-a090-496f-8c9a-3442cf30dae6')->json();
+
+
+        if($remaining_balance > 0 && $apiresponse["message"] == 'Autorizado'){
             
             $receiver_cpf_cnpj = $request->input('cpf_cnpj');
 
-            $receiver = User::where('cpf_cnpj',$receiver_contact)->first();
+            $receiver = User::where('cpf_cnpj',$receiver_cpf_cnpj)->first();
             $receiver_account = Account::where('user_id',$receiver->id)->first();
             $receiver_current_bal = $receiver_account->balance;
             $receiver_account->balance = $receiver_current_bal + $amount;
@@ -65,8 +69,11 @@ class TransactionController extends Controller
 
             $request->session()->put('success','Transferência realizada com sucesso');
             return redirect()->route('home');
-        } else {
+        } else if ($remaining_balance <= 0) {
             $request->session()->put('error','Saldo insuficiente');
+            return redirect()->route('send');
+        } else {
+            $request->session()->put('error','Transação não autorizada');
             return redirect()->route('send');
         }
     }
