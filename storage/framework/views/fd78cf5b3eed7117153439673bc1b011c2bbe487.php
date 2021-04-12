@@ -11,8 +11,8 @@
                     <th>Data</th>
                     <th>Tipo</th>
                     <th>Valor</th>
-                    <th>Sender</th>
-                    <th>Receiver</th>
+                    <th>Remetente</th>
+                    <th>Destinatário</th>
                 </tr>
             </thead>
             <tbody>

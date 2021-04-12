@@ -48,7 +48,7 @@
                 </div>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputFile">Desrição</label>
+                    <label for="exampleInputFile">Descrição</label>
                     <textarea class="form-control" name="description" id="description" placeholder="Breve Descrição"></textarea>     
                 </div>
                 <div class="form-group">

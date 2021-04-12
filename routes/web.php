@@ -65,6 +65,5 @@ Route::middleware('auth')->group(function() {
     Route::get('/profile', 'UserController@getProfile')->name('profile');
     Route::get('/send', 'TransactionController@getSend')->name('send');
     Route::post('/send', 'TransactionController@postSend')->name('send');
-    Route::get('/cardView', 'TransactionController@getCardView')->name('cardview');
     Route::get('/transaction', 'TransactionController@getTransactions')->name('transaction');
 });

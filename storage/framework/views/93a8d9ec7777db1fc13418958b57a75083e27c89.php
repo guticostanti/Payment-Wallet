@@ -97,17 +97,6 @@
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                         <div class="text-center">
-                                            <i class="fa fa-laptop fa-3x"></i><br>
-                                            Depositar<span class="caret"></span>
-                                        </div>
-                                    </a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="<?php echo e(route('cardview')); ?>"><i class="fa fa-credit-card"></i>Com cartão de crédito</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                        <div class="text-center">
                                              <i class="fa fa-database fa-3x"></i><br>
                                             Transações <span class="caret"></span>
                                         </div>

@@ -11,10 +11,6 @@ use App\User;
 
 class TransactionController extends Controller
 {
-    public function getCardView(Request $request)
-    {
-        return view('clients.cardview', compact('request'));
-    }
 
     public function getTransactions()
     {
