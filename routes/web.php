@@ -40,6 +40,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Registration Routes...
+Route::get('preregister', 'preRegisterController@preRegister')->name('preregister');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 
@@ -64,7 +65,8 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function() {
     Route::get('/profile', 'UserController@getProfile')->name('profile');
     Route::get('/presend', 'TransactionController@getPreSend')->name('presend');
-    Route::get('/send', 'TransactionController@getSend')->name('send');
+    Route::get('/sendpf', 'TransactionController@getSendPf')->name('sendpf');
+    Route::get('/sendpj', 'TransactionController@getSendPj')->name('sendpj');
     Route::post('/send', 'TransactionController@postSend')->name('send');
     Route::get('/transaction', 'TransactionController@getTransactions')->name('transaction');
 });

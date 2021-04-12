@@ -19,9 +19,14 @@ class TransactionController extends Controller
         return view('clients.transaction', compact('user', 'transactions'));
     }
 
-    public function getSend(Request $request)
+    public function getSendPf(Request $request)
     {
-        return view('clients.send', compact('request'));
+        return view('clients.sendpf', compact('request'));
+    }
+
+    public function getSendPj(Request $request)
+    {
+        return view('clients.sendpj', compact('request'));
     }
 
     public function getPreSend(Request $request) {

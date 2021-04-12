@@ -24,8 +24,8 @@
 
         <div class="panel-body ">
         <div class="row" style="text-align: center;">
-            <a href="{{ route('send') }}" class="btn btn-primary" style="width: 300px; height: 300px; line-height: 300px; font-size: 20px;">Destinatário Pessoa Física</a>
-            <a href="{{ route('send') }}" class="btn btn-primary" style="width: 300px; height: 300px; line-height: 300px; font-size: 20px;">Destinatário Pessoa Jurídica</a>
+            <a href="{{ route('sendpf') }}" class="btn btn-primary" style="width: 300px; height: 300px; line-height: 300px; font-size: 20px;">Destinatário Pessoa Física</a>
+            <a href="{{ route('sendpj') }}" class="btn btn-primary" style="width: 300px; height: 300px; line-height: 300px; font-size: 20px;">Destinatário Pessoa Jurídica</a>
         </div>
         </div>
     </section>

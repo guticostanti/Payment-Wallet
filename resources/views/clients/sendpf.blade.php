@@ -33,8 +33,8 @@
                 <div class="row">
                 <div class="col-md-6">
                 <div class="form-group">
-                    <label for="exampleInputPassword1">CPF ou CNPJ do Destinatário</label>
-                    <input type="text" class="form-control" name="cpf_cnpj" placeholder="CPF/CNPJ - Somente números">
+                    <label for="exampleInputPassword1">CPF do Destinatário</label>
+                    <input type="text" class="form-control" name="cpf_cnpj" placeholder="CPF - Somente números">
                 </div>
                 </div>
                 <div class="col-md-6">
