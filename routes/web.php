@@ -63,6 +63,7 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function() {
     Route::get('/profile', 'UserController@getProfile')->name('profile');
+    Route::get('/presend', 'TransactionController@getPreSend')->name('presend');
     Route::get('/send', 'TransactionController@getSend')->name('send');
     Route::post('/send', 'TransactionController@postSend')->name('send');
     Route::get('/transaction', 'TransactionController@getTransactions')->name('transaction');

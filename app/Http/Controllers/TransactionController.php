@@ -24,6 +24,10 @@ class TransactionController extends Controller
         return view('clients.send', compact('request'));
     }
 
+    public function getPreSend(Request $request) {
+        return view('clients.presend', compact('request'));
+    }
+
     public function postSend(Request $request) {
         $user = Auth::user();
         $sender_account = Account::where('user_id',$user->id)->first();

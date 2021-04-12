@@ -87,7 +87,7 @@
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="{{ route('send') }}">
+                                    <a href="{{ route('presend') }}">
                                         <div class="text-center">
                                             <i class="fa fa-3x fa-send"></i><br>
                                             Fazer Transação
